@@ -48,6 +48,6 @@ This compose file has two services. One for postgresql server and the other one 
 
 8. To remove everything that was created as part of this compose file, execute: 
 	
-       > docker-compose down -v --rmi 
+       > docker-compose down -v --rmi all 
 
       <br>This removes almost everything that is created for this compose file, including the images.
