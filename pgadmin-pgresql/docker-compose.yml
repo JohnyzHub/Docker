@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+    pgres-db-service:
+        container_name: "pgres-db-service"
+        image: postgres
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_DB=postgres
+        ports:
+            - "5432:5432"
+        volumes:
+            - pgres-volume:/var/lib/postgresql/data
+        networks:
+            - pgres-network
+        restart: always
+    pgadmin-service:
+        container_name: "pgadmin-service"
+        image: dpage/pgadmin4
+        depends_on:
+            - pgres-db-service
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=jbshaik@sample.com
+            - PGADMIN_DEFAULT_PASSWORD=postgres
+        ports:
+            - "8085:80"
+        volumes:
+            - pgadmin-volume:/var/lib/pgadmin
+        networks:
+            - pgres-network
+        restart: always
+
+volumes:
+    pgres-volume:
+    pgadmin-volume:
+
+networks:
+    pgres-network:
