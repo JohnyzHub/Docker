@@ -13,17 +13,21 @@ This compose file has two services. One for postgresql server and the other one 
 
 4. Login with email id and password specified for this service, in the yaml file.
 
-5. Connect to postgresql db server:
-		
+5. Get the IP address of the postgres container by opening powershell and supply the below command
+       
+       > docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <postgres-containerid>
+
+6. Connect to postgresql db server:
+	
        from lhs right click servers-> create -> server -> postgres-> connect
 	   general tab: name - postgres
-	   connection tab: host name/address - [ip of the docker-machine ie. 192.168.99.100]
+	   connection tab: host name/address - [postgres container ip from the previous step]
 			port-5432
 			maintenance database - postgres
 			user name - postgres
 			pwd  - postgres
 
-6. Open query tool and execute the below commands to query sample db table.
+7. Open query tool and execute the below commands to query sample db table.
 
 	   CREATE TABLE EMPLOYEE
 	    (
