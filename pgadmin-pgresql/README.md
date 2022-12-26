@@ -13,7 +13,8 @@ This compose file has two services. One for postgresql server and the other one 
 
 4. Login with email id and password specified for this service, in the yaml file.
 
-5. Get the IP address of the postgres container by opening powershell and supply the below command
+5. Get the postgres container id using <b>docker ps</b> command<br>and get the IP address of the postgres container<br> 
+      by opening powershell and supply the below command
        
        > docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <postgres-containerid>
 
