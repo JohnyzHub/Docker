@@ -9,7 +9,7 @@ This compose file has two services. One for postgresql server and the other one 
     This command pulls the images, creates the network, volumes and containers.
     After successful completion, two services should be up and running.
 	
-3. Connect pgadmin on browser at 8085 at docker-machine ip address (eg. 192.168.99.100:8085)
+3. Connect pgadmin on browser at localhost:8085
 
 4. Login with email id and password specified for this service, in the yaml file.
 
