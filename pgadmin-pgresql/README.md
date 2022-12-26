@@ -20,7 +20,7 @@ This compose file has two services. One for postgresql server and the other one 
 
 6. Connect to postgresql db server:
 	
-       from lhs right click servers-> create -> server -> postgres-> connect
+       from lhs right click servers-> register -> server -> postgres-> connect
 	   general tab: name - postgres
 	   connection tab: host name/address - [postgres container ip from the previous step]
 			port-5432
