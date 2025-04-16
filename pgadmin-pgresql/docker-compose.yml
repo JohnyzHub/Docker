@@ -17,7 +17,7 @@ services:
         restart: always
     pgadmin-service:
         container_name: "pgadmin-service"
-        image: geosite/pgadmin4
+        image: dpage/pgadmin4
         depends_on:
             - pgres-db-service
         environment:
