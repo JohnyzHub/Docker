@@ -49,10 +49,12 @@ This compose file has two services. One for postgresql server and the other one 
 
        > docker-compose down
 
-      <br>This stops the services, removes the network and containers created for this compose file.
+      This stops the services, removes the network and containers created for this compose file.
 
 8. To remove everything that was created as part of this compose file, execute: 
 	
-       > docker-compose down -v --rmi all 
+       > docker-compose down -v --rmi all
 
-      <br>This removes almost everything that is created for this compose file, including the images.
+      This removes almost everything that is created for this compose file, including the images.
+
+9. To set the schema name for the query tool run the command '<b>SET search_path TO schema-name</b>'; eg: set search_path TO gtp;
